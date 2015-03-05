@@ -13,10 +13,10 @@ class Test_Function extends WP_UnitTestCase {
     }
 
     public function test_funciton() {
-        
-        $_mUnknownValue = getSampleTestValue();
 
+        $_mUnknownValue = getSampleTestValue();
         $this->assertEquals( true, $_mUnknownValue );
+        
     }
     
 }    
