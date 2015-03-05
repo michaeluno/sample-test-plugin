@@ -10,6 +10,7 @@ filter:
         - '*/library/*'
 tools:
     external_code_coverage: true
+    php_code_coverage: true
 coding_style:
     php:
         indentation:
