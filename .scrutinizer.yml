@@ -9,8 +9,7 @@ filter:
         - 'test/*'
         - '*/library/*'
 tools:
-    external_code_coverage: 
-        timeout: 600    # Timeout in seconds.
+    external_code_coverage: true
 coding_style:
     php:
         indentation:
