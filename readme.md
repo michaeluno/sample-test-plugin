@@ -4,7 +4,7 @@
 
 Sample Test Plugin is an open source WordPress plugin that adds an email report form in the admin area to send server information.
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/michaeluno/admin-page-framework/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/michaeluno/sample-test-plugin/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/michaeluno/sample-test-plugin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/michaeluno/sample-test-plugin/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/michaeluno/sample-test-plugin/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/michaeluno/sample-test-plugin/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/michaeluno/sample-test-plugin/badges/build.png?b=master)](https://scrutinizer-ci.com/g/michaeluno/sample-test-plugin/build-status/master)
 
