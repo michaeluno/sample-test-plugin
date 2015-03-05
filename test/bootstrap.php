@@ -13,3 +13,5 @@ function _manually_load_plugin() {
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugin' );
 
 require $_tests_dir . '/includes/bootstrap.php';
+
+activate_plugin( 'sample-test-plugin/sample-test-plugin.php' );
