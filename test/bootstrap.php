@@ -1,17 +1,17 @@
 <?php
-$_tests_dir = getenv( 'WP_TESTS_DIR' );
-if ( ! $_tests_dir ) {
-    $_tests_dir = '/tmp/wordpress-tests-lib';
+$_sTestsDirPath = getenv( 'WP_TESTS_DIR' );
+if ( ! $_sTestsDirPath ) {
+    $_sTestsDirPath = '/tmp/wordpress-tests-lib';
 }        
 
-require_once $_tests_dir . '/includes/functions.php';
+require_once $_sTestsDirPath . '/includes/functions.php';
 
-function _manually_load_plugin() {
+function _loadPluginManually() {
 	require dirname( dirname( __FILE__ ) ) . '/sample-test-plugin.php';
 }
-tests_add_filter( 'muplugins_loaded', '_manually_load_plugin' );
+tests_add_filter( 'muplugins_loaded', '_loadPluginManually' );
 
-require $_tests_dir . '/includes/bootstrap.php';
+require $_sTestsDirPath . '/includes/bootstrap.php';
 
 $_mError = activate_plugin( 'sample-test-plugin/sample-test-plugin.php' );
 if ( null !== $_mError )  {
