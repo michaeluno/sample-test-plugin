@@ -13,7 +13,4 @@ tests_add_filter( 'muplugins_loaded', '_loadPluginManually' );
 
 require $_sTestsDirPath . '/includes/bootstrap.php';
 
-$_mError = activate_plugin( 'sample-test-plugin/sample-test-plugin.php' );
-// if ( null !== $_mError )  {
-    // trigger_error( 'The plugin could not be activated.', E_USER_ERROR );
-// }
+activate_plugin( 'sample-test-plugin/sample-test-plugin.php' );
