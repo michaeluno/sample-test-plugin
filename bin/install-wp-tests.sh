@@ -14,7 +14,7 @@ WP_VERSION=${5-latest}
 PROJECT_SLUG=${6-sample-test-plugin}
 
 SCRIPT_DIR=$(pwd)
-PROJECT_DIR=$(cd "$SCRIPT_DIR/../"; pwd)
+PROJECT_DIR=$(cd "$SCRIPT_DIR/../../"; pwd)
 
 WP_TESTS_DIR=${WP_TESTS_DIR-/tmp/wordpress-tests-lib}
 WP_CORE_DIR=/tmp/wordpress/
