@@ -11,12 +11,6 @@ DB_PASS=$3
 DB_HOST=${4-localhost}
 WP_VERSION=${5-latest}
 
-PROJECT_SLUG=${6-sample-test-plugin}
-
-# in Travis CI the directory path is : /home/travis/build/michaeluno/sample-test-plugin/
-SCRIPT_DIR=$(pwd)
-PROJECT_DIR=$(cd "$SCRIPT_DIR/../"; pwd)
-
 WP_TESTS_DIR=${WP_TESTS_DIR-/tmp/wordpress-tests-lib}
 WP_CORE_DIR=/tmp/wordpress/
 
@@ -79,35 +73,6 @@ install_db() {
 	mysqladmin create $DB_NAME --user="$DB_USER" --password="$DB_PASS"$EXTRA
 }
 
-# Installs the project plugin
-install_plugin() {
-    
-    # Make sure no old file exists.
-    if [ -d "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG" ]; then
-        
-        # Directly removing the directory sometimes fails saying it's not empty. So move it to a different location and then remove.
-        mv -f "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG" "$TEMP/$PROJECT_SLUG"
-        rm -rf "$TEMP/$PROJECT_SLUG"
-        
-        # Sometimes moving fails so remove the directory in case.
-        rm -rf "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG"
-        
-    fi    
-    
-    # The `ln` command gives "Protocol Error" on Windows hosts so use the cp command.
-    # The below cp command appends an asterisk to drop hidden items especially the .git directory but in that case, the destination directory needs to exist.
-    mkdir -p "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG"
-    # drop hidden files from being copied
-    cp -r "$PROJECT_DIR/"* "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG"
-    # rm -rf "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG/.git" # Remove git system files.
- 
-    # wp cli command
-    # wp plugin activate $PROJECT_SLUG
-    
-}
-
-
 install_wp
 install_test_suite
 install_db
-# install_plugin
