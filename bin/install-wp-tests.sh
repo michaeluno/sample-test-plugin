@@ -91,7 +91,7 @@ install_plugin() {
     
     # The `ln` command gives "Protocol Error" on Windows hosts so use the cp command.
     # The below cp command appends an asterisk to drop hidden items especially the .git directory but in that case, the destination directory needs to exist.
-    mkdir "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG"
+    mkdir -p "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG"
     # drop hidden files from being copied
     cp -r "$PROJECT_DIR/"* "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG"
     # rm -rf "$WP_TESTS_DIR/wp-content/plugins/$PROJECT_SLUG/.git" # Remove git system files.
