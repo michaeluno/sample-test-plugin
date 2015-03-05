@@ -1,5 +1,5 @@
 <phpunit
-	bootstrap="test/bootstrap.php"
+	bootstrap="./bootstrap.php"
 	backupGlobals="false"
 	colors="true"
 	convertErrorsToExceptions="true"
@@ -8,7 +8,7 @@
 	>
 	<testsuites>
 		<testsuite>
-			<directory prefix="Test_" suffix=".php">./test/</directory>
+			<directory prefix="Test_" suffix=".php">./</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>
