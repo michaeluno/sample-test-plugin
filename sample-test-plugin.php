@@ -5,6 +5,9 @@ function getSampleTestValue() {
     return true;
 }
 
+/**
+ * Sample class.
+ */
 class SampleTestPlugin {
     
     public function getA() {
