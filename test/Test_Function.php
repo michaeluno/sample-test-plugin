@@ -4,19 +4,19 @@
  */
 class Test_Function extends WP_UnitTestCase {
     
-	public function setUp() {
-		parent::setUp();
-	}
+    public function setUp() {
+        parent::setUp();
+    }
 
-	public function tearDown() {
-		parent::tearDown();
-	}
+    public function tearDown() {
+        parent::tearDown();
+    }
 
-	public function test_funciton() {
-		
+    public function test_funciton() {
+        
         $_mUnknownValue = getSampleTestValue();
 
-		$this->assertEquals( true, $_mUnknownValue );
+        $this->assertEquals( true, $_mUnknownValue );
     }
     
 }    
